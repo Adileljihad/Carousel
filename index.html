@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Carousel</title>
+    <style>
+      /* MAIN COLOR #51cf66*/
+
+      /* GRAY COLOR #495057*/
+
+      /*
+            SPACING SYSTEM (px)
+            2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+            FONT SIZE SYSTEM (px)
+            10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+            */
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      /* GENERAL STYLE */
+      body {
+        font-family: "roboto", sans-serif;
+        color: #495057;
+        line-height: 1;
+      }
+
+      .carousel-box {
+        width: 800px;
+        margin: 100px auto;
+        padding: 32px;
+        background-color: #51cf66;
+        border-radius: 8px;
+
+        position: relative;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 86px;
+      }
+
+      img {
+        height: 200px;
+        border-radius: 8px;
+        transform: scale(1.5);
+        margin-left: 48px;
+        box-shadow: 0 12px 24px rgb(0, 0, 0, 0.5);
+      }
+
+      .testimonial-text {
+        font-size: 18px;
+        font-weight: 500;
+        color: #fff;
+        line-height: 1.3;
+        margin-bottom: 32px;
+      }
+
+      .testimonial-author {
+        font-size: 14px;
+        margin-bottom: 4px;
+        color: #f8f9fa;
+      }
+
+      .testimonial-job {
+        font-size: 12px;
+        color: #f8f9fa;
+      }
+
+      .btn {
+        width: 50px;
+        height: 50px;
+        border: none;
+        border-radius: 50%;
+        background-color: #fff;
+        cursor: pointer;
+        box-shadow: 0 12px 24px rgb(0, 0, 0, 0.1);
+
+        position: absolute;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .btn--left {
+        left: 0;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      .btn--right {
+        right: 0;
+        top: 50%;
+        transform: translate(50%, -50%);
+      }
+
+      .btn-icon {
+        stroke: #51cf66;
+        width: 30px;
+        height: 30px;
+      }
+
+      .dots {
+        display: flex;
+
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translate(-50%, 32px);
+        gap: 12px;
+      }
+
+      .dot {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        border: #51cf66 solid 2px;
+        cursor: pointer;
+      }
+
+      .dot--fill {
+        background-color: #51cf66;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="carousel-box">
+      <img
+        src="./img/le-minh-phuong-niH7Z81S44g-unsplash.jpg"
+        alt="meditation-position"
+      />
+      <blockquote class="testimonial-box">
+        <p class="testimonial-text">
+          "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed
+          exercitationem atque unde maiores reprehenderit perferendis nihil
+          voluptatibus laboriosam laudantium incidunt, beatae ipsa fugiat."
+        </p>
+
+        <p class="testimonial-author">Le Minh Phuong</p>
+        <p class="testimonial-job">Yoga Teacher</p>
+      </blockquote>
+      <button class="btn btn--left">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="btn-icon"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M15.75 19.5 8.25 12l7.5-7.5"
+          />
+        </svg>
+      </button>
+      <button class="btn btn--right">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="btn-icon"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="m8.25 4.5 7.5 7.5-7.5 7.5"
+          />
+        </svg>
+      </button>
+
+      <div class="dots">
+        <button class="dot dot--fill">&nbsp;</button>
+        <button class="dot">&nbsp;</button>
+        <button class="dot">&nbsp;</button>
+        <button class="dot">&nbsp;</button>
+      </div>
+    </div>
+  </body>
+</html>
